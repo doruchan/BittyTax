@@ -192,7 +192,7 @@ def do_tax(transaction_records, tax_rules, skip_integrity_check):
     elif tax_rules == config.TAX_RULES_FIFO:
         tax.match_sell(tax.DISPOSAL_TRADE)
     elif tax_rules == config.TAX_RULES_NZ:
-        tax.match_sell()
+        pass
 
     tax.process_section104(skip_integrity_check)
     return tax, value_asset
